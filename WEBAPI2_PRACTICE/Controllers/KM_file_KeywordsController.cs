@@ -20,7 +20,7 @@ namespace WEBAPI2_PRACTICE.Controllers
     {
         private Model1 db = new Model1();
 
-        // GET: api/KM_file_Keywords
+        /// GET: api/KM_file_Keywords/GetKM_file_Keywords
         /// <summary>
         /// 查詢所有關鍵字
         /// </summary>
@@ -30,7 +30,7 @@ namespace WEBAPI2_PRACTICE.Controllers
             return db.KM_file_Keywords;
         }
 
-        // GET: api/KM_file_Keywords/5
+        // GET: api/KM_file_Keywords/GetKM_file_Keywords/5
         /// <summary>
         /// id取得單一關鍵字
         /// </summary>
@@ -48,6 +48,7 @@ namespace WEBAPI2_PRACTICE.Controllers
             return Ok(kM_file_Keywords);
         }
 
+        /// GET: api/KM_file_Keywords/GetTipList/5
         /// <summary>
         /// 取得10筆關鍵字列咬
         /// </summary>
@@ -65,6 +66,7 @@ namespace WEBAPI2_PRACTICE.Controllers
             return Ok(JsonConvert.SerializeObject(kM_file_Keywords));
         }
 
+        /// GET: api/KM_file_Keywords/GetSearchResult/5
         /// <summary>
         /// 取得搜尋結果
         /// </summary>
@@ -90,7 +92,8 @@ namespace WEBAPI2_PRACTICE.Controllers
 
             return Ok(JsonConvert.SerializeObject(file));
         }
-        // PUT: api/KM_file_Keywords/5
+
+        /// PUT: api/KM_file_Keywords/PutKM_file_Keywords/5
         /// <summary>
         /// 更新關鍵字
         /// </summary>
@@ -131,7 +134,7 @@ namespace WEBAPI2_PRACTICE.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/KM_file_Keywords
+        /// POST: api/KM_file_Keywords/PostKM_file_Keywords
         /// <summary>
         /// 更新關鍵字
         /// </summary>
@@ -151,7 +154,7 @@ namespace WEBAPI2_PRACTICE.Controllers
             return CreatedAtRoute("DefaultApi", new { id = kM_file_Keywords.SeqNo }, kM_file_Keywords);
         }
 
-        // DELETE: api/KM_file_Keywords/5
+        // DELETE: api/KM_file_Keywords/DeleteKM_file_Keywords/5
         /// <summary>
         /// 刪除關鍵字
         /// </summary>

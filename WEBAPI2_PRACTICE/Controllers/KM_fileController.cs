@@ -19,7 +19,7 @@ namespace WEBAPI2_PRACTICE.Controllers
     {
         private Model1 db = new Model1();
 
-        // GET: api/KM_file
+        /// GET: api/KM_file/GetKM_file
         /// <summary>
         /// 查詢所有檔案
         /// </summary>
@@ -29,7 +29,7 @@ namespace WEBAPI2_PRACTICE.Controllers
             return db.KM_file;
         }
 
-        // GET: api/KM_file/5
+        /// GET: api/KM_file/GetKM_file/5
         /// <summary>
         /// id取得單一檔案
         /// </summary>
@@ -47,7 +47,7 @@ namespace WEBAPI2_PRACTICE.Controllers
             return Ok(kM_file);
         }
 
-        // PUT: api/KM_file/5
+        /// PUT: api/KM_file/PutKM_file/5
         /// <summary>
         /// 更新檔案
         /// </summary>
@@ -88,7 +88,7 @@ namespace WEBAPI2_PRACTICE.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/KM_file
+        /// POST: api/KM_file/PostKM_file
         /// <summary>
         /// 新增檔案
         /// </summary>
@@ -123,7 +123,7 @@ namespace WEBAPI2_PRACTICE.Controllers
             return CreatedAtRoute("DefaultApi", new { id = kM_file.FlowId }, kM_file);
         }
 
-        // DELETE: api/KM_file/5
+        /// DELETE: api/KM_file/DeleteKM_file/5
         /// <summary>
         /// 刪除檔案
         /// </summary>

@@ -19,7 +19,7 @@ namespace WEBAPI2_PRACTICE.Controllers
     {
         private Model1 db = new Model1();
 
-        // GET: api/KM_file_Comments
+        /// GET: api/KM_file_Comments/GetKM_file_Comments
         /// <summary>
         /// 取得所有檔案論
         /// </summary>
@@ -29,7 +29,7 @@ namespace WEBAPI2_PRACTICE.Controllers
             return db.KM_file_Comments;
         }
 
-        // GET: api/KM_file_Comments/5
+        /// GET: api/KM_file_Comments/GetKM_file_Comments/5
         /// <summary>
         /// id取得單一檔案評論
         /// </summary>
@@ -47,7 +47,7 @@ namespace WEBAPI2_PRACTICE.Controllers
             return Ok(kM_file_Comments);
         }
 
-        // PUT: api/KM_file_Comments/5
+        /// PUT: api/KM_file_Comments/PutKM_file_Comments/5
         /// <summary>
         /// 更新檔案評論
         /// </summary>
@@ -88,7 +88,7 @@ namespace WEBAPI2_PRACTICE.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/KM_file_Comments
+        /// POST: api/KM_file_Comments/PostKM_file_Comments
         /// <summary>
         /// 新增檔案評論
         /// </summary>
@@ -108,7 +108,7 @@ namespace WEBAPI2_PRACTICE.Controllers
             return CreatedAtRoute("DefaultApi", new { id = kM_file_Comments.SeqNo }, kM_file_Comments);
         }
 
-        // DELETE: api/KM_file_Comments/5
+        /// DELETE: api/KM_file_Comments/DeleteKM_file_Comments/5
         /// <summary>
         /// 刪除檔案評論
         /// </summary>

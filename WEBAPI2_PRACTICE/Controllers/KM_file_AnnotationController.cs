@@ -19,7 +19,7 @@ namespace WEBAPI2_PRACTICE.Controllers
     {
         private Model1 db = new Model1();
 
-        // GET: api/KM_file_Annotation
+        /// GET: api/KM_file_Annotation/GetKM_file_Annotation
         /// <summary>
         /// 查詢所有檔案說明
         /// </summary>
@@ -29,7 +29,7 @@ namespace WEBAPI2_PRACTICE.Controllers
             return db.KM_file_Annotation;
         }
 
-        // GET: api/KM_file_Annotation/5
+        /// GET: api/KM_file_Annotation/GetKM_file_Annotation/5
         /// <summary>
         /// id取得單一檔案說明
         /// </summary>
@@ -47,7 +47,7 @@ namespace WEBAPI2_PRACTICE.Controllers
             return Ok(kM_file_Annotation);
         }
 
-        // PUT: api/KM_file_Annotation/5
+        /// PUT: api/KM_file_Annotation/PutKM_file_Annotation/5
         /// <summary>
         /// 更新檔案說明
         /// </summary>
@@ -88,7 +88,7 @@ namespace WEBAPI2_PRACTICE.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/KM_file_Annotation
+        /// POST: api/KM_file_Annotation/PostKM_file_Annotation/
         /// <summary>
         /// 新增檔案說明
         /// </summary>
@@ -108,7 +108,7 @@ namespace WEBAPI2_PRACTICE.Controllers
             return CreatedAtRoute("DefaultApi", new { id = kM_file_Annotation.SeqNo }, kM_file_Annotation);
         }
 
-        // DELETE: api/KM_file_Annotation/5
+        /// DELETE: api/KM_file_Annotation/DeleteKM_file_Annotation/5
         /// <summary>
         /// 刪除檔案說明
         /// </summary>
